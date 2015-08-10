@@ -1,0 +1,29 @@
+<div class="row" id="template_add" >
+  <div class="container">
+    <div class ="col-md-2">
+    </div>
+    <div class ="col-md-8">
+      <table  class="table .table-striped" >
+        <tr ng-repeat= 'x in data'>
+          <td>{{x.Name}}</td>
+          <td>{{x.Email}}</td>
+          <td>{{x.Random}}</td>
+          <td>{{x.Address}}</td>
+          <td><input type="checkbox" ng-model='x.Checked'><br></td>
+          <td><span class="label label-default">{{x.Checked}}</span></td>
+          <td ng-if="x.Status == 'valid'"><span class="label label-success">{{x.Status}}</span></td>
+          <td ng-if ="x.Status == 'Invalid'"><span class="label label-danger">{{x.Status}}</span></td>
+          <td ng-if = "$last"><a ng-href='#/results' ng-click="create()" class="label label-primary">Validate</a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+  	<div class="col-xs-12">
+  		<footer>
+  			<p>&copy; Copyright 2015 University of Western Ontario</p>
+  		</footer>
+  	</div>
+  </div>
+  </div>

@@ -7,9 +7,19 @@ body{
 #template_add{
   padding-top:150px;
 }
-.home_span{
-  margin-right: 8px;
-}
 .add_span{
   margin-right: 8px;
+}
+.file_select {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+}
+#file_select_button{
+  margin-top:10px;
+}
+#mySpinner{
+  margin-left: 190px;
 }

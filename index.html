@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="en" ng-app="gitlabApp">
+
 <head>
 <meta charset="UTF-8">
 <title>Gitlab</title>
@@ -9,53 +11,36 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
-<script type="text/javascript" src="./lib/validate.js"></script>
+<script src="./bower_components/angular-route/angular-route.js"></script>
 <script type="text/javascript" src="./lib/app.js"></script>
-
+<script type="text/javascript" src="./lib/controller.js"></script>
+<script type="text/javascript" src="./config/config.js"></script>
+<script src="./bower_components/papaparse.min.js"></script>
 </head>
-<body ng-app="test">
+
+<body>
+
 <nav  class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
-	<!-- Brand and toggle get grouped for better mobile display -->
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Western Engineering</a>
-		</div>
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="navbarCollapse">
-			<ul class="nav navbar-nav">
-				<li><a href="#"><span class="glyphicon glyphicon-home home_span"></span>Home</a></li>
-			</ul>
-      <ul class="nav navbar-nav navbar-right">
-				<li><a href="#"><span class="glyphicon glyphicon-user add_span"></span>firstname</a></li>
-			</ul>
-		</div>
-	</div>
-</nav>
 <div class="container">
-  <div class="row" id="template_add">
-          <div class=" col-md-4">
-                <div class="form-group">
-                  <input type="file" class="form-control" id="fileUpload" accept=".csv" placeholder="Select CSV">
-                </div>
-                <button type="submit" class="btn btn-primary" >Validate</button>
-								<h2>{{"Hello world"}}</h2>
-          </div>
-					<pre id="fileDisplayArea"><pre>
-      </div>
-  <hr>
-	<div class="row">
-		<div class="col-xs-12">
-			<footer>
-				<p>&copy; Copyright 2015 University of Western Ontario</p>
-			</footer>
-		</div>
+	<div class="navbar-header">
+		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+			<span class="sr-only">Toggle navigation</span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+		</button>
+		<a class="navbar-brand"href="#">Western Engineering</a>
+	</div>
+	<div class="collapse navbar-collapse" id="navbarCollapse">
+		<ul class="nav navbar-nav">
+			<li><a href="#"><span class="glyphicon glyphicon-menu-hamburger"></span></a></li>
+		</ul>
 	</div>
 </div>
+</nav>
+<div class="container">
+		<div ng-view></div>
+</div>
 </body>
+
 </html>

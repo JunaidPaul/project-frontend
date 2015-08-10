@@ -1,0 +1,25 @@
+<div class="row" id="template_add">
+  <div class="container">
+    <div class ="col-md-2">
+    </div>
+    <div class ="col-md-8" >
+      <img id="mySpinner" ng-src="../img/spinner.gif" ng-show="loading" />
+      <table  class="table .table-striped"  ng-hide ="loading" >
+        <tr ng-repeat= 'user in users'>
+          <td>{{user.name}}</td>
+          <td>{{user.email}}</td>
+          <td ng-if="user.status == 'success'"><span class="label label-success">{{user.status}}</span></td>
+          <td ng-if ="user.status == 'exist'"><span class="label label-danger">{{user.status}}</span></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+  	<div class="col-xs-12">
+  		<footer>
+  			<p>&copy; Copyright 2015 University of Western Ontario</p>
+  		</footer>
+  	</div>
+  </div>
+  </div>
